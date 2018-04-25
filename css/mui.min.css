@@ -1312,9 +1312,8 @@ input[type=submit]:enabled:active {
 }
 
 .mui-title {
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 44px;
+    font-size: 20px;
+    line-height: 52px;
     position: absolute;
     display: block;
     width: 100%;
@@ -1444,11 +1443,12 @@ input[type=submit]:enabled:active {
 }
 
 .mui-bar .mui-icon {
-    font-size: 24px;
+    font-size: 35px;
     position: relative;
     z-index: 20;
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    color:#fff
 }
 
 .mui-bar .mui-icon:active {
