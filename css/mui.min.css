@@ -243,7 +243,7 @@ a:active {
 }
 
 .mui-bar-nav~.mui-content {
-    padding-top: 44px
+    padding-top: 52px
 }
 
 .mui-bar-nav~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
@@ -1293,8 +1293,8 @@ input[type=submit]:enabled:active {
 
 .mui-bar-nav {
     top: 0;
-    -webkit-box-shadow: 0 1px 6px #ccc;
-    box-shadow: 0 1px 6px #ccc
+    /*-webkit-box-shadow: 0 1px 6px #ccc;*/
+    /*box-shadow: 0 1px 6px #ccc*/
 }
 
 .mui-bar-nav~.mui-content .mui-anchor {
@@ -1759,7 +1759,7 @@ input[type=submit]:enabled:active {
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
-    background-color: #fff
+    /*background-color: #fff*/
 }
 
 .mui-table-view:after {
@@ -1771,7 +1771,7 @@ input[type=submit]:enabled:active {
     content: '';
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-    background-color: #c8c7cc
+    /*background-color: #c8c7cc*/
 }
 
 .mui-table-view:before {
@@ -1782,7 +1782,7 @@ input[type=submit]:enabled:active {
     content: '';
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-    background-color: #c8c7cc;
+    /*background-color: #c8c7cc;*/
     top: -1px
 }
 
