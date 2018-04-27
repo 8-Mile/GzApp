@@ -41,7 +41,9 @@
 	top:50%;
 	right:0;
 }
-.search-wrapper.active {}
+.search-wrapper.active {
+	right:-17%;
+}
 
 .search-wrapper .input-holder {
 	overflow: hidden;
@@ -69,7 +71,7 @@
 	/*padding:0px 70px 0 20px;*/
 	opacity: 0;
 	position: absolute;
-	top:0px;
+	top:-14px;
 	left:0px;
 	background: transparent;
 	-webkit-box-sizing: border-box;
@@ -227,7 +229,7 @@
 	color:#fff
 }
 @media screen and (max-width: 560px) {
-	.search-wrapper.active .input-holder {width:200px;}
+	.search-wrapper.active .input-holder {width:240px;}
 }
 /*筛选样式*/
 .searchSort ,.Incident-searchSort{
@@ -347,7 +349,14 @@
 	background: #fff;
 	margin-top: 50px;
 }
-
+/* 样式修改 xh*/
+.mui-popover{
+	width: auto;
+}
+.mui-bar .mui-title{
+	font-weight: normal;
+	font-size: 18px;
+}
 
 
 
