@@ -1,3 +1,20 @@
+$(ready)
+function ready(){
+
+    resize()
+    $(window).resize(resize)
+}
+
+function resize(){
+    var h = window.innerHeight;
+    var headHeight = ($('.mui-bar').height());
+    var IncidentsearchSortHeight = ($('.Incident-searchSort').height());
+    var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
+    var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
+    console.log(conHeight)
+    $('.mui-control-content').height(conHeight)
+}
+
 function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
     if(!container.hasClass('active')){

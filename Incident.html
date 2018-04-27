@@ -64,8 +64,18 @@
                             <div class="mui-scroll">
                                 <ul class="mui-table-view mui-table-view-chevron">
                                     <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right">
-                                            <img class="mui-media-object mui-pull-left" src="images/cbd.jpg">
+                                        <a class="mui-navigate-right right-icon" href="IncidentInfo.html">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
                                             <div class="mui-media-body">
                                                 地铁站 A口
                                                 <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
@@ -73,20 +83,74 @@
                                         </a>
                                     </li>
                                     <li class="mui-table-view-cell mui-media">
-                                        <a class='mui-navigate-right' href="javascript:;">
-                                            <img class="mui-media-object mui-pull-left" src="images/yuantiao.jpg">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
                                             <div class="mui-media-body">
                                                 地铁站 A口
-                                                <p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right">
-                                            <img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
                                             <div class="mui-media-body">
                                                 地铁站 A口
-                                                <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口11111
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a class="mui-navigate-right right-icon">
+                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <div class="mui-media-body">
+                                                地铁站 A口1`1
+                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
                                             </div>
                                         </a>
                                     </li>
@@ -129,13 +193,7 @@
         </div>
     </div>
     <style>
-        .mui-control-content {
-            background-color: white;
-            min-height: 215px;
-        }
-        .mui-control-content .mui-loading {
-            margin-top: 50px;
-        }
+
     </style>
 
     <nav class="mui-bar mui-bar-tab ">
@@ -199,8 +257,12 @@
             }
         });
     })(mui);
-
-
+    $(".search-icon").on("click",function(){
+        $(".mui-title").hide();
+    });
+    $(".close").on("click",function(){
+        $(".mui-title").show();
+    });
 
 
 </script>

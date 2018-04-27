@@ -314,7 +314,8 @@ a:active {
 .mui-ellipsis {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    color: #858585;
 }
 
 .mui-ellipsis-2 {

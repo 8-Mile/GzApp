@@ -1,3 +1,6 @@
+ul ,ol{
+	list-style: none;
+}
 .colf{
 	color: #ffffff;
 }
@@ -229,7 +232,7 @@
 	color:#fff
 }
 @media screen and (max-width: 560px) {
-	.search-wrapper.active .input-holder {width:240px;}
+	.search-wrapper.active .input-holder {width:280px;}
 }
 /*筛选样式*/
 .searchSort ,.Incident-searchSort{
@@ -358,8 +361,38 @@
 	font-weight: normal;
 	font-size: 18px;
 }
-
-
-
-
-
+.Incident-img{
+	max-width: 82px !important;
+	height:55px !important;
+}
+.right-icon:after{
+	font-size: 30px;
+}
+.mui-control-content {
+	background-color: white;
+}
+.mui-control-content .mui-loading {
+	margin-top: 50%;
+}
+.info-title{
+	margin-top: 10px;
+	height: 20px;
+	line-height: 20px;
+}
+.info-title i{
+	width: 2px;
+	height: 14px;
+	background: #3c76f3;
+	display: inline-block;
+	margin-left: 10px;
+}
+.infoUl{
+	padding-left: 7px;
+}
+.infoUl i{
+	font-style: normal;
+}
+.infoUl li{
+	line-height: 24px;
+	color: #333;
+}
