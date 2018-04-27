@@ -3714,10 +3714,10 @@ body>.mui-progressbar {
     border-bottom: 0
 }
 
-.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
-    border-top: 1px solid #c8c7cc;
-    border-bottom: 1px solid #c8c7cc
-}
+/*.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {*/
+    /*border-top: 1px solid #c8c7cc;*/
+    /*border-bottom: 1px solid #c8c7cc*/
+/*}*/
 
 .mui-slider .mui-slider-group {
     font-size: 0;

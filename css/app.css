@@ -10,6 +10,9 @@
 .bor3{
 	border-color: #3c85f1 !important;
 }
+.mt5{
+    margin-top:5px;
+}
 .mt15{
 	margin-top: 15px;
 }
@@ -293,10 +296,10 @@
 .imgbox-img{
 	border-bottom:#f0f0f0 solid 1px
 }
-.mui-table-view li:last-child{
+.incident-img li:last-child{
 	margin-bottom: 50px;
 }
-.mui-table-view li:nth-last-child(2){
+.incident-img li:nth-last-child(2){
 	margin-bottom: 50px;
 }
 .videoimg{
