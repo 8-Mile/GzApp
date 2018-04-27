@@ -299,7 +299,12 @@
 	border-bottom:#f0f0f0 solid 1px
 }
 
-
+.incident-img li:last-child{
+	margin-bottom: 50px;
+}
+.incident-img li:nth-last-child(2) {
+	margin-bottom: 50px;
+}
 .videoimg{
 	background: #7f7f7f;
 	width: 100%;
