@@ -227,7 +227,7 @@
 	.search-wrapper.active .input-holder {width:200px;}
 }
 /*筛选样式*/
-.searchSort{
+.searchSort ,.Incident-searchSort{
 	position: fixed;
 	height: 45px;
 	width: 100%;
@@ -237,7 +237,7 @@
 	background: #fff;
 	border-bottom: #e0e0e0 solid 1px;
 }
-.searchSort li{
+.searchSort li ,.Incident-searchSort li{
 	width: 32%;
 	float: left;
 	text-align: center;
@@ -335,3 +335,18 @@
 	background-size: 250%;
 	background-position: -85px 0;
 }
+/*********事件统计**************/
+.Incident-searchSort li{
+	width: 25% !important;
+}
+.Incident-searchFastScreen{
+	height:40px;
+	background: #fff;
+	margin-top: 50px;
+}
+
+
+
+
+
+
