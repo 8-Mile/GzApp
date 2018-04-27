@@ -38,7 +38,9 @@
 	top:50%;
 	right:0;
 }
-.search-wrapper.active {}
+.search-wrapper.active {
+	right:-17%;
+}
 
 .search-wrapper .input-holder {
 	overflow: hidden;
@@ -66,7 +68,7 @@
 	/*padding:0px 70px 0 20px;*/
 	opacity: 0;
 	position: absolute;
-	top:0px;
+	top:-14px;
 	left:0px;
 	background: transparent;
 	-webkit-box-sizing: border-box;
@@ -224,7 +226,7 @@
 	color:#fff
 }
 @media screen and (max-width: 560px) {
-	.search-wrapper.active .input-holder {width:200px;}
+	.search-wrapper.active .input-holder {width:240px;}
 }
 /*筛选样式*/
 .searchSort ,.Incident-searchSort{
@@ -294,10 +296,10 @@
 	border-bottom:#f0f0f0 solid 1px
 }
 .mui-table-view li:last-child{
-	margin-bottom: 50px;
+	/* margin-bottom: 50px; */
 }
 .mui-table-view li:nth-last-child(2){
-	margin-bottom: 50px;
+	/* margin-bottom: 50px; */
 }
 .videoimg{
 	background: #7f7f7f;
@@ -344,7 +346,14 @@
 	background: #fff;
 	margin-top: 50px;
 }
-
+/* 样式修改 xh*/
+.mui-popover{
+	width: auto;
+}
+.mui-bar .mui-title{
+	font-weight: normal;
+	font-size: 18px;
+}
 
 
 
