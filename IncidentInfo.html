@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>事件统计</title>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+        <h1 class="mui-title">事件统计</h1>
+
+        <form onsubmit="submitFn(this, event);">
+            <div class="search-wrapper">
+                <div class="input-holder">
+                    <input type="text" class="search-input" placeholder="搜索站点" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+                <div class="result-container">
+                </div>
+            </div>
+        </form>
+
+    </header>
+    <div class="mui-content">
+
+        <div class="mt15">
+            <div class="mui-card">
+                <div class="videoimg">
+                    <div class="middle">
+                        <i class="noimg"></i>
+                        <p>点击视频播放图片</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mui-card">
+                <div class="videoimg">
+                    <div class="middle">
+                        <i class="vodeopaly"></i>
+                        <p>点击视频播放</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <nav class="mui-bar mui-bar-tab ">
+        <a class="mui-tab-item" href="#Popover_0">现场监控</a>
+        <a class="mui-tab-item" href="#Popover_2">应急处置</a>
+        <a class="mui-tab-item" href="#Popover_2">设备监控</a>
+        <a class="mui-tab-item" href="#Popover_2">人员监控</a>
+        <a class="mui-tab-item" href="#Popover_1">统计分析</a>
+
+    </nav>
+
+
+    <div id="Popover_1" class="mui-popover mui-bar-popover">
+        <div class="mui-popover-arrow"></div>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><a href="Incident.html">事件统计</a>
+            </li>
+            <li class="mui-table-view-cell"><a href="PersonBag.html">包数统计</a>
+            </li>
+            <li class="mui-table-view-cell"><a href="HistoryMedia.html">历史视频</a>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/layout-mobile.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>
