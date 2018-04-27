@@ -4,6 +4,12 @@
 .col9{
 	clolr:#999
 }
+.col3{
+	color:#3c85f1 !important;
+}
+.bor3{
+	border-color: #3c85f1 !important;
+}
 .mt15{
 	margin-top: 15px;
 }
@@ -228,14 +234,39 @@
 	margin: 0;
 	padding: 0;
 	z-index: 2;
+	background: #fff;
+	border-bottom: #e0e0e0 solid 1px;
 }
 .searchSort li{
-	width: 25%;
+	width: 32%;
 	float: left;
 	text-align: center;
 	display: inline-block;
 	box-sizing: border-box;
 	line-height: 45px;
+	position: relative;
+	color:#666
+}
+.checkboxbox{
+	width: 19px;
+	height: 19px;
+	border: #c0c0c0 solid 1px;
+	/*border: #3c85f1 solid 1px;*/
+	border-radius: 3px;
+	display: inline-block;
+	position: absolute;
+	top: 11px;
+	right: 5px;
+}
+.checkboxbox i{
+	display: none;
+	width: 19px;
+	height: 19px;
+	background:url("../images/ok.png") no-repeat;
+	background-size:100%;
+	position: absolute;
+	top: 0px;
+	right: -1px;
 }
 /*内容部分*/
 
