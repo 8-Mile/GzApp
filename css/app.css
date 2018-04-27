@@ -376,8 +376,8 @@ ul ,ol{
 }
 .info-title{
 	margin-top: 10px;
-	height: 20px;
-	line-height: 20px;
+	height: 38px;
+	line-height: 38px;
 }
 .info-title i{
 	width: 2px;
@@ -388,11 +388,14 @@ ul ,ol{
 }
 .infoUl{
 	padding-left: 7px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	margin-bottom: 50px;
 }
 .infoUl i{
 	font-style: normal;
 }
 .infoUl li{
-	line-height: 24px;
+	line-height: 32px;
 	color: #333;
 }
