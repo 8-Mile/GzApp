@@ -45,19 +45,27 @@
             </li>
         </ul>
         <div class="Incident-searchFastScreen">
+            <!--<div style="padding: 0px 10px;" class="mui-slider">-->
+                <!--<div id="slider" class="mui-segmented-control mui-slider-indicator mui-segmented-control-inverted mui-segmented-control-primary">-->
+                    <!--<a class="mui-control-item mui-active" href="#item1mobile">数据列表</a>-->
+                    <!--<a class="mui-control-item" href="#item2mobile">柱状图</a>-->
+                    <!--<a class="mui-control-item" href="#item3mobile">饼状图</a>-->
+                <!--</div>-->
+            <!--</div>-->
             <div id="slider" class="mui-slider" >
                 <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-                    <a class="mui-control-item mui-active" href="#item1mobile">
-                       <i>1</i> 数据列表
+                    <a class="mui-control-item mui-active pr" href="#item1mobile">
+                       <i class="Incident-icon datelist"></i> <span>数据列表</span>
                     </a>
-                    <a class="mui-control-item" href="#item2mobile">
-                        <i>1</i> 柱状图
+                    <a class="mui-control-item pr " href="#item2mobile">
+                        <i class="Incident-icon columnar"></i> <span>柱状图</span>
                     </a>
-                    <a class="mui-control-item" href="#item3mobile">
-                        <i>1</i> 饼状图
+                    <a class="mui-control-item pr " href="#item3mobile">
+                        <i class="Incident-icon broken"></i> <span>饼状图</span>
                     </a>
                 </div>
                 <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+
                 <div class="mui-slider-group mt5">
                     <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
                         <div id="scroll1" class="mui-scroll-wrapper">
