@@ -226,7 +226,7 @@
 	color:#fff
 }
 @media screen and (max-width: 560px) {
-	.search-wrapper.active .input-holder {width:240px;}
+	.search-wrapper.active .input-holder {width:260px;}
 }
 /*筛选样式*/
 .searchSort ,.Incident-searchSort{
