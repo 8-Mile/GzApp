@@ -227,9 +227,17 @@
 	position: fixed;
 	height: 45px;
 	width: 100%;
-	background:#000;
 	margin: 0;
+	padding: 0;
 	z-index: 2;
+}
+.searchSort li{
+	width: 25%;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: 45px;
 }
 /*内容部分*/
 
