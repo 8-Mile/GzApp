@@ -10,13 +10,6 @@ ul ,ol{
 .col9{
 	clolr:#999
 }
-.col3{
-	color:#3c85f1 !important;
-}
-.bor3{
-	border-color: #3c85f1 !important;
-}
-
 .mt5{
     margin-top:5px;
 }
@@ -28,6 +21,63 @@ ul ,ol{
 }
 .mt50{
 	margin-top:50px
+}
+
+/*****************筛选*******************/
+.xl{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../images/xl.png) no-repeat;
+	background-size: 100%;
+	position: inherit;
+	top: 8px;
+}
+.hianjdInfo{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	display: block;
+	position: fixed;
+	top: 97px;
+	z-index: 11;
+}
+.searCont{
+	height: 70%;
+	background: #fff;
+	position: relative;
+}
+.searContBtn{
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	border-top: #f0f0f0 solid 1px;
+}
+.searContBtn li{
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 50px;
+	color: #666;
+}
+.searContBtn li:first-child{
+	background: #3c76f3;
+	color: #fff;
+}
+.searchSortActive{
+	color: #3c85f1 !important;
+}
+.searchSortActive .xl{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../images/sl.png) no-repeat;
+	background-size: 100%;
+	position: inherit;
+	top: 8px;
 }
 /*无数据*/
 .noDeta{
@@ -263,7 +313,6 @@ ul ,ol{
 	width: 19px;
 	height: 19px;
 	border: #c0c0c0 solid 1px;
-	/*border: #3c85f1 solid 1px;*/
 	border-radius: 3px;
 	display: inline-block;
 	position: absolute;
@@ -287,10 +336,8 @@ ul ,ol{
 	border-color: #3c85f1 !important;
 }
 /*内容部分*/
-
 .layout-content{
 	width: 100%;
-
 	background: #000000;
 }
 /*历史图像*/
@@ -465,8 +512,7 @@ ul ,ol{
 	background: url("../images/4.png") no-repeat;
 	background-size: 100%;
 }
-
-	/**********包数监控**********/
+/**********包数监控**********/
 .PersonBag-tab{
 	background: #fff;
 	padding: 0px 10px;

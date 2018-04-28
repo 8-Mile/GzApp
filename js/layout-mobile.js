@@ -1,8 +1,9 @@
 $(ready)
 function ready(){
 
-    resize()
-    videoImg()
+    resize();
+    videoImg();
+    HistoryMediaSearchSort();
     $(window).resize(resize)
 }
 /*******************高度计算************************/
@@ -12,7 +13,6 @@ function resize(){
     var IncidentsearchSortHeight = ($('.Incident-searchSort').height());
     var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
     var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
-    console.log(conHeight)
     $('.mui-control-content').height(conHeight)
 }
 /*******************只看图像************************/
@@ -20,6 +20,13 @@ function videoImg(){
     $(".searchSort li:last").click(function(){
         $(this).toggleClass("imgActive");
         $('.incident-imgvideo').toggle()
+    })
+}
+/*******************历史视频筛选*******************/
+function HistoryMediaSearchSort(){
+    $(".Hianjd").click(function(){
+        $(this).toggleClass("searchSortActive")
+        $(".hianjdInfo").toggle()
     })
 }
 /*******************搜索框************************/
@@ -50,3 +57,4 @@ function submitFn(obj, evt){
     $(obj).find('.result-container').fadeIn(100);
     evt.preventDefault();
 }
+/****************************/
