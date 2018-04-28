@@ -2,9 +2,10 @@ $(ready)
 function ready(){
 
     resize()
+    videoImg()
     $(window).resize(resize)
 }
-
+/*******************高度计算************************/
 function resize(){
     var h = window.innerHeight;
     var headHeight = ($('.mui-bar').height());
@@ -14,7 +15,14 @@ function resize(){
     console.log(conHeight)
     $('.mui-control-content').height(conHeight)
 }
-
+/*******************只看图像************************/
+function videoImg(){
+    $(".searchSort li:last").click(function(){
+        $(this).toggleClass("imgActive");
+        $('.incident-imgvideo').toggle()
+    })
+}
+/*******************搜索框************************/
 function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
     if(!container.hasClass('active')){
