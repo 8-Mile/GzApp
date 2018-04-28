@@ -11,25 +11,7 @@
 </head>
 <body>
 <style>
-    .mui-row.mui-fullscreen>[class*="mui-col-"] {
-        height: 100%;
-    }
-    .mui-col-xs-3,
-    .mui-control-content {
-        overflow-y: auto;
-        height: 100%;
-    }
-    .mui-segmented-control .mui-control-item {
-        line-height: 50px;
-        width: 100%;
-    }
-    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-        background-color: #fff;
-    }
-    .mui-col-xs-9{
-        max-height:355px;
-        overflow: overlay;
-    }
+
 </style>
 <header class="mui-bar mui-bar-nav">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
@@ -203,13 +185,9 @@
                         <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
                         </div>
                     </div>
-                    <div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
-                        <div id="item1" class="mui-control-content mui-active">
-                        </div>
-                        <div id="item2" class="mui-control-content" style="height:auto;">
-                        </div>
-                        <div id="item3" class="mui-control-content">
-                        </div>
+                    <div id="segmentedControlContents" class="mui-col-xs-9" >
+
+
                     </div>
                 </div>
             </div>
@@ -263,12 +241,12 @@
         m = 3, //左侧选项卡数量+1
         n = 21; //每个选项卡列表数量+1
     for (; i < m; i++) {
-        html.push('<a class="mui-control-item" href="#content' + i + '">选项' + i + '</a>');
+        html.push('<a class="mui-control-item noBorder " href="#content' + i + '">线路' + i + '</a>');
     }
     controls.innerHTML = html.join('');
     html = [];
     for (i = 1; i < m; i++) {
-        html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+        html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view mui-bgf0">');
         for (j = 1; j < n; j++) {
             html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
         }

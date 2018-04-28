@@ -1,6 +1,9 @@
 ul ,ol{
 	list-style: none;
 }
+.mui-bgf0{
+	background: #f0f0f0;
+}
 .pr{
 	position: relative;
 }
@@ -22,7 +25,13 @@ ul ,ol{
 .mt50{
 	margin-top:50px
 }
+.noBorder{
+	border: none !important;
 
+}
+.mui-bgf0{
+	background: #f0f0f0 !important;
+}
 /*****************筛选*******************/
 .xl{
 	width: 20px;
@@ -357,6 +366,25 @@ ul ,ol{
 	background: #000000;
 }
 /*历史图像*/
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+	height: 100%;
+}
+.mui-col-xs-3,
+.mui-control-content {
+	overflow-y: auto;
+	height: 100%;
+}
+.mui-segmented-control .mui-control-item {
+	line-height: 50px;
+	width: 100%;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-color: #fff;
+}
+.mui-col-xs-9{
+	max-height:400px;
+	overflow: overlay;
+}
 .incident-imgvideo li:last-child, .incident-imgvideo li:nth-last-child(2){
 	margin-bottom:55px
 }
