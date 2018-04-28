@@ -37,22 +37,38 @@ ul ,ol{
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,.4);
-	display: block;
+	display: none;
 	position: fixed;
 	top: 97px;
 	z-index: 11;
 }
+.searchXianluCon{
+}
 .searCont{
-	height: 70%;
+	max-height: 70%;
 	background: #fff;
 	position: relative;
 }
+.searchTimeCon {
+	padding-top: 10px;
+	width: 90%;
+	margin: 0 auto;
+	display: none;
+}
+.searchTimeCon div{
+	width: 32.4%;
+	height: 45px;
+	line-height: 45px;
+	padding: 0;
+}
+
 .searContBtn{
 	height: 50px;
 	margin: 0;
 	padding: 0;
-	position: absolute;
-	bottom: 0px;
+	/*position: absolute;*/
+	/*bottom: 0px;*/
+	margin-top:15px;
 	width: 100%;
 	border-top: #f0f0f0 solid 1px;
 }
@@ -341,6 +357,9 @@ ul ,ol{
 	background: #000000;
 }
 /*历史图像*/
+.incident-imgvideo li:last-child, .incident-imgvideo li:nth-last-child(2){
+	margin-bottom:55px
+}
 .imgbox:hover{
 	-moz-box-shadow:2px 2px 5px #333333;
 	-webkit-box-shadow:2px 2px 5px #333333;

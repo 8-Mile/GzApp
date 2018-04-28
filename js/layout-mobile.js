@@ -13,7 +13,7 @@ function resize(){
     var IncidentsearchSortHeight = ($('.Incident-searchSort').height());
     var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
     var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
-    $('.mui-control-content').height(conHeight)
+    $('.mui-height').height(conHeight)
 }
 /*******************只看图像************************/
 function videoImg(){
@@ -26,6 +26,14 @@ function videoImg(){
 function HistoryMediaSearchSort(){
     $(".Hianjd").click(function(){
         $(this).toggleClass("searchSortActive")
+        $(".searchTimeCon").hide()
+        $(".searchXianluCon").show()
+        $(".hianjdInfo").toggle()
+    })
+    $(".Histime").click(function(){
+        $(this).toggleClass("searchSortActive")
+        $(".searchTimeCon").toggle()
+        $(".searchXianluCon").hide()
         $(".hianjdInfo").toggle()
     })
 }

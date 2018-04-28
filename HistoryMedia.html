@@ -10,6 +10,27 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<style>
+    .mui-row.mui-fullscreen>[class*="mui-col-"] {
+        height: 100%;
+    }
+    .mui-col-xs-3,
+    .mui-control-content {
+        overflow-y: auto;
+        height: 100%;
+    }
+    .mui-segmented-control .mui-control-item {
+        line-height: 50px;
+        width: 100%;
+    }
+    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+        background-color: #fff;
+    }
+    .mui-col-xs-9{
+        max-height:355px;
+        overflow: overlay;
+    }
+</style>
 <header class="mui-bar mui-bar-nav">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
     <h1 class="mui-title">历史视频</h1>
@@ -164,11 +185,38 @@
     </div>
     <div class="hianjdInfo">
         <div class="searCont">
+            <div class="searchTimeCon">
+                <div class="mui-btn ">
+                    前一天
+                </div>
+                <div class="mui-btn mui-btn-primary">
+                    当前日期
+                </div>
+                <div class="mui-btn ">
+                    后一天
+                </div>
+            </div>
+            <!--安检点查询列表-->
+            <div class="searchXianluCon">
+                <div class=" mui-row">
+                    <div class="mui-col-xs-3">
+                        <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+                        </div>
+                    </div>
+                    <div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+                        <div id="item1" class="mui-control-content mui-active">
+                        </div>
+                        <div id="item2" class="mui-control-content" style="height:auto;">
+                        </div>
+                        <div id="item3" class="mui-control-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <ul class="searContBtn">
                 <li>确定</li>
                 <li>重置</li>
-                <!--<li><button type="button" class="mui-btn mui-btn-primary mui-btn-block">Block button</button></li>-->
-                <!--<li><button type="button" class="mui-btn mui-btn-primary mui-btn-block">Block button</button></li>-->
+
             </ul>
         </div>
     </div>
@@ -204,7 +252,32 @@
 <script src="js/layout-mobile.js"></script>
 <script>
 
-
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    var controls = document.getElementById("segmentedControls");
+    var contents = document.getElementById("segmentedControlContents");
+    var html = [];
+    var i = 1,
+        j = 1,
+        m = 3, //左侧选项卡数量+1
+        n = 21; //每个选项卡列表数量+1
+    for (; i < m; i++) {
+        html.push('<a class="mui-control-item" href="#content' + i + '">选项' + i + '</a>');
+    }
+    controls.innerHTML = html.join('');
+    html = [];
+    for (i = 1; i < m; i++) {
+        html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+        for (j = 1; j < n; j++) {
+            html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
+        }
+        html.push('</ul></div>');
+    }
+    contents.innerHTML = html.join('');
+    //默认选中第一个
+    controls.querySelector('.mui-control-item').classList.add('mui-active');
+    contents.querySelector('.mui-control-content').classList.add('mui-active');
 
 
 
