@@ -1,9 +1,17 @@
 $(ready)
 function ready(){
+    topsearch()
 
-    
 }
 
+function topsearch(){
+    $(".search-icon").on("click", function () {
+        $(".mui-title").hide();
+    });
+    $(".close").on("click", function () {
+        $(".mui-title").show();
+    });
+}
 
 /*******************搜索框************************/
 function searchToggle(obj, evt){

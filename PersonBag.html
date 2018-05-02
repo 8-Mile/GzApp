@@ -8,6 +8,7 @@
     <title>包数统计</title>
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="js/PersonBag/personbag.css">
 </head>
 <body>
 <header class="mui-bar mui-bar-nav">
@@ -34,22 +35,59 @@
         </div>
     </div>
     <div>
-        <div id="item1" class="mui-control-content mui-active">
+        <div id="item1" class="mui-control-content mui-active mui-tab-one">
             <div id="scroll" class="mui-scroll-wrapper">
                 <div class="mui-scroll ">
                     111111
                 </div>
             </div>
+            <div class="personBagSecorCont">
+                <div class="searCont">
+                    <!--时间-->
+                    <div class="searchTimeCon">
+                        <div class="mui-btn ">
+                            前一天
+                        </div>
+                        <div class="mui-btn mui-btn-primary">
+                            当前日期
+                        </div>
+                        <div class="mui-btn ">
+                            后一天
+                        </div>
+                    </div>
+                    <div class="line-y"></div>
+                    <div class="xl-list">
+                        <div class="mui-btn">1号线</div>
+                        <div class="mui-btn">2号线</div>
+                        <div class="mui-btn">3号线</div>
+                        <div class="mui-btn">4号线</div>
+                        <div class="mui-btn">5号线</div>
+                        <div class="mui-btn">6号线</div>
+                        <div class="mui-btn">7号线</div>
+                        <div class="mui-btn">8号线</div>
+                        <div class="mui-btn">9号线</div>
+                        <div class="mui-btn">10号线</div>
+                        <div class="mui-btn">11号线</div>
+                        <div class="mui-btn">12号线</div>
+                    </div>
+                    <ul class="searContBtn">
+                        <li>确定</li>
+                        <li>重置</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div id="item2" class="mui-control-content ">
 
-            <div id="slider" class="mui-slider" >
-                <div id="sliderSegmentedControl" style="margin-top: 10px;" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <div id="slider" class="mui-slider">
+                <div id="sliderSegmentedControl" style="margin-top: 10px;"
+                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
                     <a class="mui-control-item mui-active pr" href="#item1mobile">
                         <i class="Incident-icon PersonBag-time"></i> <span>按时刻</span>
                     </a>
                     <a class="mui-control-item pr " href="#item2mobile">
-                        <i class="Incident-icon columnar"></i> <span>按站点</span>
+                        <i class="Incident-icon PersonBag-zd"></i> <span>按站点</span>
                     </a>
 
                 </div>
@@ -62,7 +100,8 @@
                                 <ul class="mui-table-view mui-table-view-chevron">
                                     <li class="mui-table-view-cell mui-media">
                                         <a class="mui-navigate-right right-icon" href="IncidentInfo.html">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
+                                            <img class="mui-media-object mui-pull-left Incident-img"
+                                                 src="images/list-img.png">
                                             <div class="mui-media-body">
                                                 地铁站 A口
                                                 <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
@@ -87,6 +126,89 @@
 
                 </div>
 
+            </div>
+            <div class="personBagSecorCont">
+                <div class="searCont">
+                    <!--时间-->
+                    <div class="searchTimeCon">
+                        <div class="mui-btn ">
+                            前一天
+                        </div>
+                        <div class="mui-btn mui-btn-primary">
+                            当前日期
+                        </div>
+                        <div class="mui-btn ">
+                            后一天
+                        </div>
+                    </div>
+
+                    <div class="searchXianluCon">
+                        <div class=" mui-row">
+                            <div class="mui-col-xs-4 ">
+                                <div id="segmentedControls"
+                                     class="mui-segmented-control mui-zdnav mui-segmented-control-vertical">
+                                </div>
+                            </div>
+                            <div id="" class="mui-col-xs-8 max400">
+                                <div id="content1" class="mui-control-content mui-active">
+
+                                    <div class="siteSectorlist">
+                                        <form class="mui-input-group">
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>checked：true</label>
+                                                <input name="checkbox1" value="Item 3" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站1</label>
+                                                <input name="checkbox1" value="Item 4" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站1：true</label>
+                                                <input name="checkbox1" value="Item 3" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站1：true</label>
+                                                <input name="checkbox1" value="Item 4" type="checkbox" checked>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="content2" class="mui-control-content ">
+                                    <div class="siteSectorlist">
+                                        <form class="mui-input-group">
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>checked：true</label>
+                                                <input name="checkbox1" value="Item 3" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站1</label>
+                                                <input name="checkbox1" value="Item 4" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站2</label>
+                                                <input name="checkbox1" value="Item 4" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站3</label>
+                                                <input name="checkbox1" value="Item 3" type="checkbox" >
+                                            </div>
+                                            <div class="mui-input-row mui-checkbox">
+                                                <label>清华东路西口站4</label>
+                                                <input name="checkbox1" value="Item 4" type="checkbox" checked>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="searContBtn">
+                        <li>确定</li>
+                        <li>重置</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -119,49 +241,19 @@
 
 
 </body>
+
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script src="js/layout-mobile.js"></script>
+<script src="js/PersonBag/personbag.js"></script>
 <script>
 
     (function ($) {
         $('.mui-scroll-wrapper').scroll({
             indicators: true //是否显示滚动条
         });
-        var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">222222</li></ul>';
-        var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">3333333-1</li></ul>';
-        var item2 = document.getElementById('item2mobile');
-        var item3 = document.getElementById('item3mobile');
-        document.getElementById('slider').addEventListener('slide', function (e) {
-            if (e.detail.slideNumber === 1) {
-                if (item2.querySelector('.mui-loading')) {
-                    setTimeout(function () {
-                        item2.querySelector('.mui-scroll').innerHTML = html2;
-                    }, 500);
-                }
-            } else if (e.detail.slideNumber === 2) {
-                if (item3.querySelector('.mui-loading')) {
-                    setTimeout(function () {
-                        item3.querySelector('.mui-scroll').innerHTML = html3;
-                    }, 500);
-                }
-            }
-        });
-        var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
-        $('.mui-input-group').on('change', 'input', function () {
-            if (this.checked) {
-                sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
-                //force repaint
-                sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
-            }
-        });
+
     })(mui);
-    $(".search-icon").on("click", function () {
-        $(".mui-title").hide();
-    });
-    $(".close").on("click", function () {
-        $(".mui-title").show();
-    });
 
 
 </script>

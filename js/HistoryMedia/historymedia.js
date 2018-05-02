@@ -44,7 +44,7 @@ function ajdsector(){
         $(".nav-tab-ul").toggle()
     })
 }
-
+/*******************线路筛选*********************/
 function siteSector(){
     var controls = document.getElementById("segmentedControls");
     // var contents = document.getElementById("segmentedControlContents");

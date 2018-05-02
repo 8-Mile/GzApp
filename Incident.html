@@ -126,6 +126,130 @@
                 <p class="col9">暂无数据</p>
             </div>
         </div>
+        <div class="hianjdInfo">
+            <div class="searCont">
+                <!--时间-->
+                <div class="searchTimeCon">
+                    <div class="mui-btn ">
+                        前一天
+                    </div>
+                    <div class="mui-btn mui-btn-primary">
+                        当前日期
+                    </div>
+                    <div class="mui-btn ">
+                        后一天
+                    </div>
+                </div>
+                <!--安检点查询列表-->
+                <div class="searchXianluCon">
+                    <div class=" mui-row">
+                        <div class="mui-col-xs-4 ">
+                            <div id="segmentedControls"
+                                 class="mui-segmented-control mui-zdnav mui-segmented-control-vertical">
+                            </div>
+                        </div>
+                        <div id="" class="mui-col-xs-8 max400">
+                            <div id="content1" class="mui-control-content mui-active">
+
+                                <div class="siteSectorlist">
+                                    <form class="mui-input-group">
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>checked：true</label>
+                                            <input name="checkbox1" value="Item 3" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站1</label>
+                                            <input name="checkbox1" value="Item 4" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站1：true</label>
+                                            <input name="checkbox1" value="Item 3" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站1：true</label>
+                                            <input name="checkbox1" value="Item 4" type="checkbox" checked>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="content2" class="mui-control-content ">
+                                <div class="siteSectorlist">
+                                    <form class="mui-input-group">
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>checked：true</label>
+                                            <input name="checkbox1" value="Item 3" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站1</label>
+                                            <input name="checkbox1" value="Item 4" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站2</label>
+                                            <input name="checkbox1" value="Item 4" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站3</label>
+                                            <input name="checkbox1" value="Item 3" type="checkbox" >
+                                        </div>
+                                        <div class="mui-input-row mui-checkbox">
+                                            <label>清华东路西口站4</label>
+                                            <input name="checkbox1" value="Item 4" type="checkbox" checked>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--事件类型-->
+                <div class="eventCont">
+                    <div class="mui-btn ">
+                        无违禁
+                    </div>
+                    <div class="mui-btn mui-btn-primary">
+                        违禁
+                    </div>
+                    <div class="mui-btn ">
+                        报警
+                    </div>
+                    <div class="mui-btn ">
+                        未处警
+                    </div>
+                </div>
+                <!--物品类型-->
+                <div class="goodsCont">
+                    <div class="mui-btn ">
+                        正常
+                    </div>
+                    <div class="mui-btn mui-btn-primary">
+                        管制刀具
+                    </div>
+                    <div class="mui-btn ">
+                        易燃易爆器
+                    </div>
+                    <div class="mui-btn ">
+                        炸药
+                    </div>
+                    <div class="mui-btn ">
+                        有毒物质
+                    </div>
+                    <div class="mui-btn ">
+                        放射性物品
+                    </div>
+                    <div class="mui-btn ">
+                        其他危险品
+                    </div>
+
+                </div>
+                <ul class="searContBtn">
+                    <li>确定</li>
+                    <li>重置</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
     <nav class="mui-bar mui-bar-tab ">
         <a class="mui-tab-item" href="#Popover_0">现场监控</a>
@@ -159,7 +283,10 @@
         $('.mui-scroll-wrapper').scroll({
             indicators: true //是否显示滚动条
         });
-
+        mui('.mui-input-group').on('change', 'input', function() {
+            var value = this.checked?"true":"false";
+            this.previousElementSibling.innerText = "checked："+value;
+        });
     })(mui);
 
 
