@@ -2,6 +2,7 @@ $(ready)
 function ready() {
     muiTab();
     resize();
+    IncidentSector;
     $(window).resize(resize)
 }
 function resize(){
@@ -13,7 +14,9 @@ function resize(){
     $('.mui-height').height(conHeight)
 }
 /***************************事件统计头部筛选***********************************/
+function IncidentSector(){
 
+}
 
 /***************************事件统计tab切换***********************************/
 function muiTab(){

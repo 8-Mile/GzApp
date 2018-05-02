@@ -1,49 +1,9 @@
 $(ready)
 function ready(){
 
-    resize();
-    videoImg();
-    ajdsector();
-    HistoryMediaSearchSort();
-    $(window).resize(resize)
+    
 }
-/*******************高度计算************************/
-function resize(){
-    var h = window.innerHeight;
-    var headHeight = ($('.mui-bar').height());
-    var IncidentsearchSortHeight = ($('.Incident-searchSort').height());
-    var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
-    var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
-    $('.mui-height').height(conHeight)
-}
-/*******************只看图像************************/
-function videoImg(){
-    $(".searchSort li:last").click(function(){
-        $(this).toggleClass("imgActive");
-        $('.incident-imgvideo').toggle()
-    })
-}
-/*******************历史视频筛选*******************/
-function HistoryMediaSearchSort(){
-    $(".Hianjd").click(function(){
-        $(this).toggleClass("searchSortActive")
-        $(".searchTimeCon").hide()
-        $(".searchXianluCon").show()
-        $(".hianjdInfo").toggle()
-    })
-    $(".Histime").click(function(){
-        $(this).toggleClass("searchSortActive")
-        $(".searchTimeCon").toggle()
-        $(".searchXianluCon").hide()
-        $(".hianjdInfo").toggle()
-    })
-}
-/*******************安检点筛选*********************/
-function ajdsector(){
-        $(".nav-tab ").click(function(){
-            $(".nav-tab-ul").toggle()
-        })
-}
+
 
 /*******************搜索框************************/
 function searchToggle(obj, evt){
