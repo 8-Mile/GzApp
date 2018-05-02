@@ -13,6 +13,10 @@ ul ,ol{
 .col9{
 	clolr:#999
 }
+.max400{
+	max-height: 400px;
+	overflow: overlay;
+}
 .mt5{
     margin-top:5px;
 }
@@ -31,6 +35,9 @@ ul ,ol{
 }
 .mui-bgf0{
 	background: #f0f0f0 !important;
+}
+.txin2{
+	text-indent: 2em;
 }
 /*****************筛选*******************/
 .xl{
@@ -95,7 +102,7 @@ ul ,ol{
 .searchSortActive{
 	color: #3c85f1 !important;
 }
-.searchSortActive .xl{
+.searchSortActive .xl {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
@@ -360,11 +367,56 @@ ul ,ol{
 .imgActive .checkboxbox{
 	border-color: #3c85f1 !important;
 }
+.zd-nav .mui-active a{
+	background: #f0f0f0 !important;
+}
+.nav-tab{
+	background: #f0f0f0;
+	line-height: 50px;
+	text-indent: 2em;
+	position: relative;
+
+}
+.nav-tab .xl{
+	position: absolute;
+	right: 30px;
+	top: 18px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../images/xl.png) no-repeat;
+	background-size: 100%;
+
+}
+
+.nav-tab-ul{
+	background: #e0e0e0 !important;
+
+}
+.mui-nav-tab-right:after{
+	font-size:26px !important;
+}
+
+.mui-tab-ul>.mui-active .mui-nav-tab-right:after{
+	color: #3c76f3 !important;
+}
+.nav-tab-ul p{
+	color: #333;
+	line-height: 40px;
+	text-indent: 3em;
+}
+.mui-tab-ul{
+	background: #f0f0f0 !important;
+}
+.mui-tab-ul li:after{
+	background: none !important;
+}
 /*内容部分*/
 .layout-content{
 	width: 100%;
 	background: #000000;
 }
+
 /*历史图像*/
 .mui-row.mui-fullscreen>[class*="mui-col-"] {
 	height: 100%;
@@ -374,17 +426,21 @@ ul ,ol{
 	overflow-y: auto;
 	height: 100%;
 }
-.mui-segmented-control .mui-control-item {
-	line-height: 50px;
+.mui-zdnav .mui-control-item {
+	line-height: 43px;
 	width: 100%;
 }
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+.mui-segmented-control-inverted .mui-control-item.mui-active {
 	background-color: #fff;
 }
-.mui-col-xs-9{
-	max-height:400px;
-	overflow: overlay;
+.mui-zdnav a{
+	color: #333 !important;
 }
+.mui-zdnav .mui-control-item.mui-active {
+	background-color: #f0f0f0;
+	color: #0461e0 !important;
+}
+
 .incident-imgvideo li:last-child, .incident-imgvideo li:nth-last-child(2){
 	margin-bottom:55px
 }

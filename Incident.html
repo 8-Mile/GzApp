@@ -8,6 +8,7 @@
     <title>事件统计</title>
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="js/incident/incident.css">
 </head>
 <body>
     <header class="mui-bar mui-bar-nav">
@@ -29,19 +30,21 @@
     </header>
     <div class="mui-content">
         <ul class="Incident-searchSort">
-            <li>
+            <li class="site">
                 <span>站点</span>
+                <i class="xl"></i>
             </li>
-            <li>
-                <span>前一天</span>
+            <li class="time">
+                <span>时间</span>
+                <i class="xl"></i>
             </li>
-            <li >
+            <li class="event">
                 <span>事件</span>
-
+                <i class="xl"></i>
             </li>
-            <li >
+            <li class="goods">
                 <span>物品</span>
-
+                <i class="xl"></i>
             </li>
         </ul>
         <div class="Incident-searchFastScreen">
@@ -84,99 +87,28 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口11111
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon">
-                                            <img class="mui-media-object mui-pull-left Incident-img" src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口1`1
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
                                 </ul>
-
                             </div>
                         </div>
                     </div>
-                    <div id="item2mobile" class="mui-slider-item mui-control-content">
+                    <div id="item2mobile" class="mui-slider-item mui-control-content mui-height">
                         <div id="scroll2" class="mui-scroll-wrapper">
                             <div class="mui-scroll">
                                 <div class="mui-loading">
                                     <div class="mui-spinner">
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div id="item3mobile" class="mui-slider-item mui-control-content">
+                    <div id="item3mobile" class="mui-slider-item mui-control-content mui-height">
                         <div id="scroll3" class="mui-scroll-wrapper">
                             <div class="mui-scroll">
                                 <div class="mui-loading">
                                     <div class="mui-spinner">
+
                                     </div>
                                 </div>
                             </div>
@@ -195,10 +127,6 @@
             </div>
         </div>
     </div>
-    <style>
-
-    </style>
-
     <nav class="mui-bar mui-bar-tab ">
         <a class="mui-tab-item" href="#Popover_0">现场监控</a>
         <a class="mui-tab-item" href="#Popover_2">应急处置</a>
@@ -221,51 +149,19 @@
         </ul>
     </div>
 
-
 </body>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script src="js/layout-mobile.js"></script>
+<script src="js/incident/incident.js"></script>
 <script>
 
     (function($) {
         $('.mui-scroll-wrapper').scroll({
             indicators: true //是否显示滚动条
         });
-        var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">222222</li></ul>';
-        var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">3333333-1</li></ul>';
-        var item2 = document.getElementById('item2mobile');
-        var item3 = document.getElementById('item3mobile');
-        document.getElementById('slider').addEventListener('slide', function(e) {
-            if (e.detail.slideNumber === 1) {
-                if (item2.querySelector('.mui-loading')) {
-                    setTimeout(function() {
-                        item2.querySelector('.mui-scroll').innerHTML = html2;
-                    }, 500);
-                }
-            } else if (e.detail.slideNumber === 2) {
-                if (item3.querySelector('.mui-loading')) {
-                    setTimeout(function() {
-                        item3.querySelector('.mui-scroll').innerHTML = html3;
-                    }, 500);
-                }
-            }
-        });
-        var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
-        $('.mui-input-group').on('change', 'input', function() {
-            if (this.checked) {
-                sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
-                //force repaint
-                sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
-            }
-        });
+
     })(mui);
-    $(".search-icon").on("click",function(){
-        $(".mui-title").hide();
-    });
-    $(".close").on("click",function(){
-        $(".mui-title").show();
-    });
+
 
 
 </script>

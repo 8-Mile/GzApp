@@ -3,6 +3,7 @@ function ready(){
 
     resize();
     videoImg();
+    ajdsector();
     HistoryMediaSearchSort();
     $(window).resize(resize)
 }
@@ -37,6 +38,13 @@ function HistoryMediaSearchSort(){
         $(".hianjdInfo").toggle()
     })
 }
+/*******************安检点筛选*********************/
+function ajdsector(){
+        $(".nav-tab ").click(function(){
+            $(".nav-tab-ul").toggle()
+        })
+}
+
 /*******************搜索框************************/
 function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');

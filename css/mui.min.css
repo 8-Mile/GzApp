@@ -3971,7 +3971,7 @@ body>.mui-progressbar {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     text-decoration: none;
-    color: #bbb;
+    color: #999;
     -webkit-font-smoothing: antialiased
 }
 
