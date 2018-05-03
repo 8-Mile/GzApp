@@ -25,4 +25,8 @@
     margin-top:10px
 }
 
-
+.bargraph{
+    width: 400px;
+    height: 500px;
+    background: #000;
+}

@@ -18,6 +18,10 @@ function resize(){
 $(".mui-btn").click(function(){
     alert("Text: " + $(this).text());
 })
+$(".searContBtn").click(function(){
+    $(".personBagSecorCont").hide()
+})
+
 /*********************tab切换*************************/
 function personBagTab(){
     var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">222222</li></ul>';

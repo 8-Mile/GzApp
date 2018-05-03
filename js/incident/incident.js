@@ -1,10 +1,13 @@
-$(ready)
+ready()
+
 function ready() {
     muiTab();
     resize();
     IncidentSector();
     siteSector();
+
     $(window).resize(resize)
+
 }
 function resize(){
     var h = window.innerHeight;
@@ -44,8 +47,8 @@ function IncidentSector(){
 
 /***************************事件统计tab切换***********************************/
 function muiTab(){
-    var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">222222</li></ul>';
-    var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">3333333-1</li></ul>';
+    var html2 = '<div class="bargraph" id="bargraph"></div>';
+    var html3 = '<div class="cc">33</div>';
     var item2 = document.getElementById('item2mobile');
     var item3 = document.getElementById('item3mobile');
     document.getElementById('slider').addEventListener('slide', function(e) {
@@ -63,6 +66,7 @@ function muiTab(){
             }
         }
     });
+
     var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
     $('.mui-input-group').on('change', 'input', function() {
         if (this.checked) {
@@ -71,9 +75,10 @@ function muiTab(){
             sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
         }
     });
+    bargraph();
 }
 
-/*******************线路筛选*********************/
+/****************************************线路筛选******************************************/
 function siteSector(){
     var controls = document.getElementById("segmentedControls");
     // var contents = document.getElementById("segmentedControlContents");
@@ -101,3 +106,69 @@ function siteSector(){
     // contents.querySelector('.mui-control-content').classList.add('mui-active');
 
 }
+/****************************************柱状图******************************************/
+function bargraph(){
+    $('#bargraph').highcharts({chart: {
+            type: 'column'
+        },
+
+        title: {
+            text: '按性别划分的水果消费总量'
+        },
+        xAxis: {
+            categories: ['苹果', '橘子', '梨', '葡萄', '香蕉']
+        },
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: '水果数量'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    '总量: ' + this.point.stackTotal;
+            }
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '小张',
+            data: [0, 3, 4, 7, 2],
+            stack: 'male'
+        }, {
+            name: '小潘',
+            data: [3, 4, 4, 2, 5],
+            stack: 'male'
+        }, {
+            name: '小彭',
+            data: [2, 5, 6, 2, 1],
+            stack: 'female'
+        }, {
+            name: '小王',
+            data: [3, 0, 4, 4, 3],
+            stack: 'female'
+        }]
+
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
