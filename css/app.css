@@ -579,7 +579,7 @@ ul ,ol{
 	background: url("../images/2.png") no-repeat;
 	background-size: 100%;
 }
-.columnar{
+ .columnar{
 
 	background: url("../images/5-5.png") no-repeat;
 	background-size: 100%;
@@ -599,19 +599,19 @@ ul ,ol{
 	background: url("../images/1.png") no-repeat;
 	background-size: 100%;
 }
-.PersonBag-time{
+.mui-ac-fin .PersonBag-time{
 	background: url("../images/3-3.png") no-repeat;
 	background-size: 100%;
 }
-.mui-active  .PersonBag-time{
+.mui-ac-fin .mui-active  .PersonBag-time{
 	background: url("../images/3.png") no-repeat;
 	background-size: 100%;
 }
-.PersonBag-zd{
+.mui-active .PersonBag-zd{
 	background: url("../images/4-4.png") no-repeat;
 	background-size: 100%;
 }
-.mui-active  .PersonBag-zd{
+.mui-ac-fin .mui-active  .PersonBag-zd{
 	background: url("../images/4.png") no-repeat;
 	background-size: 100%;
 }

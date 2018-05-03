@@ -5,38 +5,38 @@ function ready() {
     resize();
     IncidentSector();
     siteSector();
-
     $(window).resize(resize)
-
 }
-function resize(){
+
+function resize() {
     var h = window.innerHeight;
     var headHeight = ($('.mui-bar').height());
     var IncidentsearchSortHeight = ($('.Incident-searchSort').height());
     var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
-    var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
+    var conHeight = h - headHeight - IncidentsearchSortHeight - searchFastScreenHeight - 70;
     $('.mui-height').height(conHeight)
 }
+
 /***************************事件统计头部筛选***********************************/
-function IncidentSector(){
-    $(".site").click(function(){
+function IncidentSector() {
+    $(".site").click(function () {
         $(this).toggleClass("searchSortActive")
         $(".hianjdInfo").toggle()
     })
-    $(".time").click(function(){
+    $(".time").click(function () {
         $(this).toggleClass("searchSortActive")
         $(".searchTimeCon").toggle()
         $(".searchXianluCon").hide()
         $(".hianjdInfo").toggle()
     })
-    $(".event").click(function(){
+    $(".event").click(function () {
         $(this).toggleClass("searchSortActive")
         $(".eventCont").toggle()
         $(".searchXianluCon").hide()
         $(".searchXianluCon").hide()
         $(".hianjdInfo").toggle()
     })
-    $(".goods").click(function(){
+    $(".goods").click(function () {
         $(this).toggleClass("searchSortActive")
         $(".goodsCont").toggle()
         $(".searchXianluCon").hide()
@@ -46,40 +46,29 @@ function IncidentSector(){
 }
 
 /***************************事件统计tab切换***********************************/
-function muiTab(){
+function muiTab() {
     var html2 = '<div class="bargraph" id="bargraph"></div>';
-    var html3 = '<div class="cc">33</div>';
+    var html3 = '<div class="bargraph" id="piechart"></div>';
     var item2 = document.getElementById('item2mobile');
     var item3 = document.getElementById('item3mobile');
-    document.getElementById('slider').addEventListener('slide', function(e) {
+    document.getElementById('slider').addEventListener('slide', function (e) {
         if (e.detail.slideNumber === 1) {
             if (item2.querySelector('.mui-loading')) {
-                setTimeout(function() {
-                    item2.querySelector('.mui-scroll').innerHTML = html2;
-                }, 500);
+                item2.querySelector('.mui-scroll').innerHTML = html2;
+                bargraph();
             }
         } else if (e.detail.slideNumber === 2) {
             if (item3.querySelector('.mui-loading')) {
-                setTimeout(function() {
-                    item3.querySelector('.mui-scroll').innerHTML = html3;
-                }, 500);
+                item3.querySelector('.mui-scroll').innerHTML = html3;
+                piechart()
             }
         }
     });
 
-    var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
-    $('.mui-input-group').on('change', 'input', function() {
-        if (this.checked) {
-            sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
-            //force repaint
-            sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
-        }
-    });
-    bargraph();
 }
 
 /****************************************线路筛选******************************************/
-function siteSector(){
+function siteSector() {
     var controls = document.getElementById("segmentedControls");
     // var contents = document.getElementById("segmentedControlContents");
     var html = [];
@@ -106,57 +95,151 @@ function siteSector(){
     // contents.querySelector('.mui-control-content').classList.add('mui-active');
 
 }
+
 /****************************************柱状图******************************************/
-function bargraph(){
-    $('#bargraph').highcharts({chart: {
+function bargraph() {
+    $('#bargraph').highcharts({
+        chart: {
             type: 'column'
         },
 
         title: {
-            text: '按性别划分的水果消费总量'
+            text: ''
         },
         xAxis: {
-            categories: ['苹果', '橘子', '梨', '葡萄', '香蕉']
+            categories: ['站点1', '站点2', '站点3', '站点4', '站点5', '站点6', '站点7']
         },
         yAxis: {
             allowDecimals: false,
             min: 0,
             title: {
-                text: '水果数量'
+                text: '单位（个）'
             }
+        },
+        subtitle: {
+            text: ''
         },
         tooltip: {
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    this.series.name + ': ' + this.y + '<br/>' +
-                    '总量: ' + this.point.stackTotal;
+                    this.series.name + ': ' + this.y
             }
         },
 
         plotOptions: {
             column: {
                 stacking: 'normal'
-            }
+            },
+
+        },
+        credits: {
+            enabled: false
+        },
+        lenged: {
+            enabled: false
         },
         series: [{
-            name: '小张',
-            data: [0, 3, 4, 7, 2],
-            stack: 'male'
+            name: '正常',
+            data: [10, 3, 4, 7, 2, 3, 4],
+            color: '#3dc49a',
+
         }, {
-            name: '小潘',
-            data: [3, 4, 4, 2, 5],
-            stack: 'male'
+            name: '管制刀具',
+            data: [10, 4, 4, 2, 5, 4, 2],
+            color:'#f1a63a'
         }, {
-            name: '小彭',
-            data: [2, 5, 6, 2, 1],
-            stack: 'female'
+            name: '易燃易爆品',
+            data: [2, 5, 6, 2, 1, 5, 7],
+            color:'#f56060'
         }, {
-            name: '小王',
-            data: [3, 0, 4, 4, 3],
-            stack: 'female'
+            name: '炸药',
+            data: [3, 0, 4, 4, 3, 6, 8],
+            color:'#5cb2f4'
+
+        }, {
+            name: '有毒物品',
+            data: [3, 0, 4, 4, 3, 9, 9],
+            color:'#ff7ec1'
+
+        }, {
+            name: '放射性物品',
+            data: [3, 0, 4, 4, 3, 20, 3],
+            color:'#6f86e5'
+
+        }, {
+            name: '其他危险品',
+            data: [3, 10, 4, 4, 3, 5, 8],
+            color:'#c69186'
+
         }]
 
     });
+}
+
+/****************************************饼状图******************************************/
+function piechart() {
+
+    $('#piechart').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: '站点名称',
+            align: 'left',
+            y: 20,
+            x: 10,
+            style: {
+                color: '#333333'
+            }
+
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                innerSize: '100',
+                colors: [
+                    '#c18c00',
+                    '#ff9c26',
+                    '#ff562c',
+                    '#e965c3',
+                    '#ac2a2d',
+                    '#d08ff6',
+                    '#32bf88'
+                ],
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b><br> {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '',
+
+            data: [
+                ['其他危险品', 20.0],
+                ['放射性物品', 15.0],
+                ['有毒物品', 5],
+                ['炸药', 5],
+                ['易燃易爆器', 10.0],
+                ['管制刀具', 20.0],
+                ['正常', 30.0],
+            ]
+        }]
+    });
+
 }
 
 

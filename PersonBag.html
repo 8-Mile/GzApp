@@ -38,7 +38,7 @@
         <div id="item1" class="mui-control-content mui-active mui-tab-one">
             <div id="scroll" class="mui-scroll-wrapper">
                 <div class="mui-scroll ">
-                    111111
+                    <div class="bargraph" id="linechartstop"></div>
                 </div>
             </div>
             <div class="personBagSecorCont">
@@ -78,11 +78,11 @@
             </div>
 
         </div>
-        <div id="item2" class="mui-control-content ">
+        <div id="item2" class="mui-control-content mui-ac-fin">
 
             <div id="slider" class="mui-slider">
                 <div id="sliderSegmentedControl" style="margin-top: 10px;"
-                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted ">
                     <a class="mui-control-item mui-active pr" href="#item1mobile">
                         <i class="Incident-icon PersonBag-time"></i> <span>按时刻</span>
                     </a>
@@ -91,29 +91,16 @@
                     </a>
 
                 </div>
-                <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+                <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4" style="margin-left:35px"></div>
 
                 <div class="mui-slider-group mt5">
                     <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
                         <div id="scroll1" class="mui-scroll-wrapper">
-                            <div class="mui-scroll">
-                                <ul class="mui-table-view mui-table-view-chevron">
-                                    <li class="mui-table-view-cell mui-media">
-                                        <a class="mui-navigate-right right-icon" href="IncidentInfo.html">
-                                            <img class="mui-media-object mui-pull-left Incident-img"
-                                                 src="images/list-img.png">
-                                            <div class="mui-media-body">
-                                                地铁站 A口
-                                                <p class='mui-ellipsis'>2018-04-09 14:57:11</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <div class="bargraph" id="linecharts"></div>
                         </div>
                     </div>
                     <div id="item2mobile" class="mui-slider-item mui-control-content">
-                        <div id="scroll2" class="mui-scroll-wrapper">
+                        <div id="scroll2" class="mui-scroll-wrapper " >
                             <div class="mui-scroll">
                                 <div class="mui-loading">
                                     <div class="mui-spinner">
@@ -244,6 +231,9 @@
 
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
+<script src="js/plugin/hicharts/highcharts.js"></script>
+<script src="js/plugin/hicharts/highcharts-zh_CN.js"></script>
+<script src="js/plugin/hicharts/highcharts-more.js"></script>
 <script src="js/layout-mobile.js"></script>
 <script src="js/PersonBag/personbag.js"></script>
 <script>
