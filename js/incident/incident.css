@@ -15,7 +15,6 @@
     padding-top: 10px;
     width: 90%;
     margin: 0 auto;
-    display: none;
 }
 .eventCont div ,.goodsCont div{
     width: 32.4%;
@@ -31,3 +30,4 @@
     width: 100%;
     height: 100%;
 }
+.box{ margin:10px; display:none}

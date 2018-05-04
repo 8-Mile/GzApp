@@ -18,33 +18,31 @@ function resize() {
 }
 
 /***************************事件统计头部筛选***********************************/
+
 function IncidentSector() {
-    $(".site").click(function () {
-        $(this).toggleClass("searchSortActive")
-        $(".hianjdInfo").toggle()
-    })
-    $(".time").click(function () {
-        $(this).toggleClass("searchSortActive")
-        $(".searchTimeCon").toggle()
-        $(".searchXianluCon").hide()
-        $(".hianjdInfo").toggle()
-    })
-    $(".event").click(function () {
-        $(this).toggleClass("searchSortActive")
-        $(".eventCont").toggle()
-        $(".searchXianluCon").hide()
-        $(".searchXianluCon").hide()
-        $(".hianjdInfo").toggle()
-    })
-    $(".goods").click(function () {
-        $(this).toggleClass("searchSortActive")
-        $(".goodsCont").toggle()
-        $(".searchXianluCon").hide()
-        $(".searchXianluCon").hide()
-        $(".hianjdInfo").toggle()
+    // $(".Incident-searchSort li").on("click",function(){
+    //     var index = $(this).index();
+    //     if(index == 0){
+    //         $(".hianjdInfo").show();
+    //         index++;
+    //     }else{
+    //         $(".hianjdInfo").hide();
+    //         index--;
+    //     }
+    // })
+
+    $(".Incident-searchSort li").on("click",function(){
+        var index=$(this).index();
+        $(".hianjdInfo").show();
+        $(this).parent().next().find(".searCont").hide().eq(index).show();
+        $(this).addClass("searchSortActive").siblings().removeClass("searchSortActive");
+        $(this).is('.searchSortActive')
+        console.log($(this).is('.searchSortActive'))
+        // if($(this).is('.searchSortActive')){
+        //     $(".hianjdInfo").hide();
+        // }
     })
 }
-
 /***************************事件统计tab切换***********************************/
 function muiTab() {
     var html2 = '<div class="bargraph" id="bargraph"></div>';
