@@ -6,6 +6,7 @@ function ready() {
     siteSector();
     lineCharts();
     linechartstop();
+    personBagSector();
     $(window).resize(resize)
 }
 
@@ -19,13 +20,23 @@ function resize() {
     $('.mui-tab-one').height(conHeight)
     $('.mui-slider-group').height(tabCon)
 }
+function personBagSector(){
+    $(".mui-btn").click(function () {
+        alert("Text: " + $(this).text());
+    })
+    $(".searXltBtn li:first").click(function () {
+        $("#xlSecor").hide()
+    })
+    $(".searZdtBtn li:first").click(function () {
+        $("#zdSecor").hide()
+    })
+    if($(".mui-tab-navList-two a:last").is(".mui-active")){
+        // $(this).addClass("mui-tab-two-line")
+        alert(1)
+    }
+    console.log($(".mui-tab-navList-two a:last").is(".mui-active"))
+}
 
-$(".mui-btn").click(function () {
-    alert("Text: " + $(this).text());
-})
-$(".searContBtn").click(function () {
-    $(".personBagSecorCont").hide()
-})
 
 /*********************tab切换*************************/
 function personBagTab() {

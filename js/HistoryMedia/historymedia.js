@@ -18,25 +18,29 @@ function resize(){
 }
 /*******************只看图像************************/
 function videoImg(){
-    $(".searchSort li:last").click(function(){
+    $(".onlyImg").click(function(){
         $(this).toggleClass("imgActive");
-        $('.incident-imgvideo').toggle()
+        $('.incident-imgvideo').toggle();
+
+
+
     })
 }
 /*******************历史视频筛选*******************/
 function HistoryMediaSearchSort(){
-    $(".Hianjd").click(function(){
-        $(this).toggleClass("searchSortActive")
-        $(".searchTimeCon").hide()
-        $(".searchXianluCon").show()
-        $(".hianjdInfo").toggle()
+    $(".searchSort li").on("click",function(){
+        var index = $(this).index();
+        if(!$(this).is(".searchSortActive")){
+            $(this).addClass("searchSortActive").siblings().removeClass("searchSortActive");
+            $(".hianjdInfo").show();
+            $(".divoBox").eq(index).show().siblings().hide();
+        }else{
+            $(".hianjdInfo").hide();
+            $(this).removeClass("searchSortActive");
+            $(".divoBox").eq(index).hide();
+        }
     })
-    $(".Histime").click(function(){
-        $(this).toggleClass("searchSortActive")
-        $(".searchTimeCon").toggle()
-        $(".searchXianluCon").hide()
-        $(".hianjdInfo").toggle()
-    })
+
 }
 /*******************安检点筛选*********************/
 function ajdsector(){

@@ -35,14 +35,14 @@
         </div>
     </div>
     <div>
-        <div id="item1" class="mui-control-content mui-active mui-tab-one">
+        <div id="item1" class="mui-control-content mui-active mui-tab-one" >
             <div id="scroll" class="mui-scroll-wrapper">
                 <div class="mui-scroll ">
                     <div class="bargraph" id="linechartstop"></div>
                 </div>
             </div>
-            <div class="personBagSecorCont">
-                <div class="searCont">
+            <div class="personBagSecorCont" id="xlSecor">
+                <div class="searCont" >
                     <!--时间-->
                     <div class="searchTimeCon">
                         <div class="mui-btn ">
@@ -70,7 +70,7 @@
                         <div class="mui-btn">11号线</div>
                         <div class="mui-btn">12号线</div>
                     </div>
-                    <ul class="searContBtn">
+                    <ul class="searContBtn searXltBtn">
                         <li>确定</li>
                         <li>重置</li>
                     </ul>
@@ -78,11 +78,10 @@
             </div>
 
         </div>
-        <div id="item2" class="mui-control-content mui-ac-fin">
+        <div id="item2" class="mui-control-content mui-ac-fin" >
 
             <div id="slider" class="mui-slider">
-                <div id="sliderSegmentedControl" style="margin-top: 10px;"
-                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted ">
+                <div id="sliderSegmentedControl"  class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mt10 mui-tab-navList-two">
                     <a class="mui-control-item mui-active pr" href="#item1mobile">
                         <i class="Incident-icon PersonBag-time"></i> <span>按时刻</span>
                     </a>
@@ -91,7 +90,7 @@
                     </a>
 
                 </div>
-                <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4" style="margin-left:35px"></div>
+                <!--<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4" style="margin-left:35px;"></div>-->
 
                 <div class="mui-slider-group mt5">
                     <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
@@ -114,7 +113,7 @@
                 </div>
 
             </div>
-            <div class="personBagSecorCont">
+            <div class="personBagSecorCont" id="zdSecor">
                 <div class="searCont">
                     <!--时间-->
                     <div class="searchTimeCon">
@@ -191,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="searContBtn">
+                    <ul class="searContBtn searZdtBtn">
                         <li>确定</li>
                         <li>重置</li>
                     </ul>

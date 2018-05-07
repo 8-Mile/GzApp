@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>历史视频统计</title>
     <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="js/HistoryMedia/historymedia.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -36,18 +37,115 @@
             <span>安检点</span>
             <i class="xl"></i>
         </li>
-        <li class="Histime">
+        <li class="Histime ">
             <span>时间</span>
             <i class="xl"></i>
         </li>
-        <li>
+        <div class="onlyImg">
             <span>只看图像</span>
             <div class="checkboxbox">
                 <i></i>
             </div>
-        </li>
+        </div>
     </ul>
+    <div class="hianjdInfo">
+        <div class="searCont divoBox">
+            <div class="searchXianluCon">
+                <div class=" mui-row">
+                    <div class="mui-col-xs-4 ">
+                        <div id="segmentedControls"
+                             class="mui-segmented-control mui-zdnav mui-segmented-control-vertical">
+                        </div>
+                    </div>
+                    <div id="" class="mui-col-xs-8 max400">
+                        <div id="content1" class="mui-control-content mui-active">
+                            <ul class="mui-table-view mui-tab-ul">
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站1</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                        <p>安检点3</p>
+                                        <p>安检点4</p>
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站2</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                        <p>安检点5</p>
+                                        <p>安检点6</p>
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站3</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="content2" class="mui-control-content ">
+                            <ul class="mui-table-view mui-tab-ul">
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站1</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                        <p>安检点3</p>
+                                        <p>安检点4</p>
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站2</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                        <p>安检点5</p>
+                                        <p>安检点6</p>
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站3</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell mui-collapse ">
+                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站4</a>
+                                    <div class="mui-collapse-content nav-tab-ul">
+                                        <p>安检点1</p>
+                                        <p>安检点2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="searCont divoBox">
 
+            <div class="searchTimeCon">
+                <div class="mui-btn ">
+                    前一天
+                </div>
+                <div class="mui-btn mui-btn-primary">
+                    当前日期
+                </div>
+                <div class="mui-btn ">
+                    后一天
+                </div>
+            </div>
+        </div>
+        <ul class="searContBtn ">
+            <li>确定</li>
+            <li>重置</li>
+        </ul>
+    </div>
 
     <ul class="mui-table-view incident-imgvideo mui-grid-view mt40 " style="display: none">
         <li class="mui-table-view-cell mui-media mui-col-xs-6">
@@ -165,102 +263,7 @@
             <p class="col9">暂无数据</p>
         </div>
     </div>
-    <div class="hianjdInfo">
-        <div class="searCont">
-            <div class="searchTimeCon">
-                <div class="mui-btn ">
-                    前一天
-                </div>
-                <div class="mui-btn mui-btn-primary">
-                    当前日期
-                </div>
-                <div class="mui-btn ">
-                    后一天
-                </div>
-            </div>
-            <!--安检点查询列表-->
-            <div class="searchXianluCon">
-                <div class=" mui-row">
-                    <div class="mui-col-xs-4 ">
-                        <div id="segmentedControls"
-                             class="mui-segmented-control mui-zdnav mui-segmented-control-vertical">
-                        </div>
-                    </div>
-                    <div id="" class="mui-col-xs-8 max400">
-                        <div id="content1" class="mui-control-content mui-active">
-                            <ul class="mui-table-view mui-tab-ul">
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站1</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                        <p>安检点3</p>
-                                        <p>安检点4</p>
-                                    </div>
-                                </li>
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站2</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                        <p>安检点5</p>
-                                        <p>安检点6</p>
-                                    </div>
-                                </li>
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站3</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="content2" class="mui-control-content ">
-                            <ul class="mui-table-view mui-tab-ul">
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站1</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                        <p>安检点3</p>
-                                        <p>安检点4</p>
-                                    </div>
-                                </li>
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站2</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                        <p>安检点5</p>
-                                        <p>安检点6</p>
-                                    </div>
-                                </li>
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站3</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                    </div>
-                                </li>
-                                <li class="mui-table-view-cell mui-collapse ">
-                                    <a class="mui-navigate-right mui-nav-tab-right txin2" href="#">清华东路西口站4</a>
-                                    <div class="mui-collapse-content nav-tab-ul">
-                                        <p>安检点1</p>
-                                        <p>安检点2</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ul class="searContBtn">
-                <li>确定</li>
-                <li>重置</li>
-            </ul>
-        </div>
-    </div>
+
 </div>
 
 
@@ -297,30 +300,7 @@
     mui.init({
         swipeBack: true //启用右滑关闭功能
     });
-    var controls = document.getElementById("segmentedControls");
-    var contents = document.getElementById("segmentedControlContents");
-    var html = [];
-    var i = 1,
-        j = 1,
-        m = 3, //左侧选项卡数量+1
-        n = 21; //每个选项卡列表数量+1
-    for (; i < m; i++) {
-        html.push('<a class="mui-control-item noBorder " href="#content' + i + '">线路' + i + '</a>');
-    }
-    controls.innerHTML = html.join('');
-    html = [];
-    for (i = 1; i < m; i++) {
-        html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
-        for (j = 1; j < n; j++) {
-            html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
-        }
-        html.push('</ul></div>');
-    }
 
-    // contents.innerHTML = html.join('');
-    //默认选中第一个
-    controls.querySelector('.mui-control-item').classList.add('mui-active');
-    // contents.querySelector('.mui-control-content').classList.add('mui-active');
 
 
 </script>

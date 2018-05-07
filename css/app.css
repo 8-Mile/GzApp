@@ -20,6 +20,9 @@ ul ,ol{
 .mt5{
     margin-top:5px;
 }
+.mt10{
+	margin-top:10px;
+}
 .mt15{
 	margin-top: 15px;
 }
@@ -64,7 +67,7 @@ ul ,ol{
 	max-height: 70%;
 	background: #fff;
 	position: relative;
-	display: none;
+	/*display: none;*/
 	padding-bottom: 20px;
 }
 .searchTimeCon {
@@ -86,6 +89,7 @@ ul ,ol{
 	background: #fff;
 	width: 100%;
 	border-top: #f0f0f0 solid 1px;
+	display: block !important;
 }
 .searContBtn li{
 	float: left;
@@ -340,32 +344,7 @@ ul ,ol{
 	position: relative;
 	color:#666
 }
-.checkboxbox{
-	width: 19px;
-	height: 19px;
-	border: #c0c0c0 solid 1px;
-	border-radius: 3px;
-	display: inline-block;
-	position: absolute;
-	top: 11px;
-	right: 5px;
-}
-.imgActive .checkboxbox i{
-	/*display: none;*/
-	width: 19px;
-	height: 19px;
-	background:url("../images/ok.png") no-repeat;
-	background-size:100%;
-	position: absolute;
-	top: 0px;
-	right: -1px;
-}
-.imgActive{
-	color:#3c85f1 !important;
-}
-.imgActive .checkboxbox{
-	border-color: #3c85f1 !important;
-}
+
 .zd-nav .mui-active a{
 	background: #f0f0f0 !important;
 }

@@ -1,0 +1,33 @@
+.onlyImg{
+    width: 32%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    color: #666;
+}
+.checkboxbox{
+    width: 19px;
+    height: 19px;
+    border: #c0c0c0 solid 1px;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right:18px;
+}
+.imgActive .checkboxbox i{
+    /*display: none;*/
+    width: 19px;
+    height: 19px;
+    background:url("../../images/ok.png") no-repeat;
+    background-size:100%;
+    position: absolute;
+    top: 0px;
+    right: -1px;
+}
+.imgActive{
+    color:#3c85f1 !important;
+}
+.imgActive .checkboxbox{
+    border-color: #3c85f1 !important;
+}

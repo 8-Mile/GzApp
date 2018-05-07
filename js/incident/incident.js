@@ -5,6 +5,7 @@ function ready() {
     resize();
     IncidentSector();
     siteSector();
+    textDate();
     $(window).resize(resize)
 }
 
@@ -16,31 +17,27 @@ function resize() {
     var conHeight = h - headHeight - IncidentsearchSortHeight - searchFastScreenHeight - 70;
     $('.mui-height').height(conHeight)
 }
-
+/***************************获取点击内容存储***********************************/
+function textDate(){
+    $(".mui-btn").click(function(){
+        alert($(this).html())
+    })
+}
 /***************************事件统计头部筛选***********************************/
 
 function IncidentSector() {
-    // $(".Incident-searchSort li").on("click",function(){
-    //     var index = $(this).index();
-    //     if(index == 0){
-    //         $(".hianjdInfo").show();
-    //         index++;
-    //     }else{
-    //         $(".hianjdInfo").hide();
-    //         index--;
-    //     }
-    // })
-
     $(".Incident-searchSort li").on("click",function(){
-        var index=$(this).index();
-        $(".hianjdInfo").show();
-        $(this).parent().next().find(".searCont").hide().eq(index).show();
-        $(this).addClass("searchSortActive").siblings().removeClass("searchSortActive");
-        $(this).is('.searchSortActive')
-        console.log($(this).is('.searchSortActive'))
-        // if($(this).is('.searchSortActive')){
-        //     $(".hianjdInfo").hide();
-        // }
+        var index = $(this).index();
+        if(!$(this).is(".searchSortActive")){
+            $(this).addClass("searchSortActive").siblings().removeClass("searchSortActive");
+            $(".hianjdInfo").show();
+            $(".searCont").eq(index).show().siblings().hide();
+        }else{
+            $(".hianjdInfo").hide();
+            $(this).removeClass("searchSortActive");
+            $(".searCont").eq(index).hide();
+        }
+
     })
 }
 /***************************事件统计tab切换***********************************/
