@@ -4,6 +4,8 @@ function ready(){
     videoImg();
     ajdsector();
     siteSector();
+    textDate();
+
     HistoryMediaSearchSort();
     $(window).resize(resize)
 }
@@ -15,6 +17,18 @@ function resize(){
     var searchFastScreenHeight = ($('.Incident-searchFastScreen').height());
     var conHeight = h - headHeight -IncidentsearchSortHeight -searchFastScreenHeight - 70;
     $('.mui-height').height(conHeight)
+}
+
+
+
+/*******************获取点击内容************************/
+function textDate(){
+    $(".nav-tab-ul p").click(function(){
+        alert($(this).html())
+    })
+    $(".txin2").click(function(){
+        alert($(this).html())
+    })
 }
 /*******************只看图像************************/
 function videoImg(){

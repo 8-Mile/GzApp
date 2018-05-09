@@ -116,13 +116,13 @@
         <div class="searCont">
             <!--时间-->
             <div class="searchTimeCon ">
-                <div class="mui-btn ">
+                <div class="mui-btn yesterday">
                     前一天
                 </div>
                 <div class="mui-btn mui-btn-primary">
-                    当前日期
+                    <span id="today"></span>
                 </div>
-                <div class="mui-btn ">
+                <div class="mui-btn tomorrow">
                     后一天
                 </div>
             </div>
@@ -284,6 +284,7 @@
     </ul>
 </div>
 
+
 </body>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
@@ -292,6 +293,7 @@
 <script src="js/plugin/hicharts/highcharts-more.js"></script>
 <script src="js/layout-mobile.js"></script>
 <script src="js/incident/incident.js"></script>
+<script src="js/plugin/moment.js"></script>
 <script>
 
     (function ($) {
@@ -304,7 +306,25 @@
         });
 
     })(mui);
+    var nowDate = new Date();
+    // $("#today").on('DOMNodeInserted', function(e) {
+    //     console.log( $(e.target).html());
+    // });
+    $("#today").click(function(){
+        nowDate = moment().format('MM/DD');
+        $("#today").html("今日"+ nowDate)
+    })
+    $("#today").html("今日" + moment().format('MM/DD'))
+    $(".yesterday").click(function(){
+        nowDate =  moment(nowDate).subtract(1, "days").format('MM/DD')
+        $("#today").html("当前日期"+ nowDate)
+    })
+    $(".tomorrow").click(function(){
+       nowDate =  moment(nowDate).add(1, "days").format('MM/DD')
+        $("#today").html("当前日期"+ nowDate)
+    })
 
 
 </script>
+
 </html>

@@ -5,7 +5,8 @@ function ready() {
     resize();
     IncidentSector();
     siteSector();
-    textDate();
+    // textDate();
+
     $(window).resize(resize)
 }
 
@@ -18,11 +19,14 @@ function resize() {
     $('.mui-height').height(conHeight)
 }
 /***************************获取点击内容存储***********************************/
-function textDate(){
-    $(".mui-btn").click(function(){
-        alert($(this).html())
-    })
-}
+// function textDate(){
+//     $(".mui-btn").click(function(){
+//         alert($(this).html())
+//     })
+// }
+
+/***************************当前时间***********************************/
+
 /***************************事件统计头部筛选***********************************/
 
 function IncidentSector() {

@@ -21,9 +21,9 @@ function resize() {
     $('.mui-slider-group').height(tabCon)
 }
 function personBagSector(){
-    $(".mui-btn").click(function () {
-        alert("Text: " + $(this).text());
-    })
+    // $(".mui-btn").click(function () {
+    //     alert("Text: " + $(this).text());
+    // })
     $(".searXltBtn li:first").click(function () {
         $("#xlSecor").hide()
     })

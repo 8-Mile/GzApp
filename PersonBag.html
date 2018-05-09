@@ -45,13 +45,13 @@
             <div class="searCont">
                 <!--时间-->
                 <div class="searchTimeCon">
-                    <div class="mui-btn ">
+                    <div class="mui-btn yesterday">
                         前一天
                     </div>
                     <div class="mui-btn mui-btn-primary">
-                        当前日期
+                        <span id="today"></span>
                     </div>
-                    <div class="mui-btn ">
+                    <div class="mui-btn tomorrow">
                         后一天
                     </div>
                 </div>
@@ -117,14 +117,14 @@
         <div class="personBagSecorCont" id="zdSecor">
             <div class="searCont">
                 <!--时间-->
-                <div class="searchTimeCon">
-                    <div class="mui-btn ">
+                <div class="searchTimeCon ">
+                    <div class="mui-btn yesterdaytab">
                         前一天
                     </div>
                     <div class="mui-btn mui-btn-primary">
-                        当前日期
+                        <span id="todaytab"></span>
                     </div>
-                    <div class="mui-btn ">
+                    <div class="mui-btn tomorrowtab">
                         后一天
                     </div>
                 </div>
@@ -235,6 +235,7 @@
 <script src="js/plugin/hicharts/highcharts-more.js"></script>
 <script src="js/layout-mobile.js"></script>
 <script src="js/PersonBag/personbag.js"></script>
+<script src="js/plugin/moment.js"></script>
 <script>
 
     (function ($) {
@@ -243,7 +244,28 @@
         });
 
     })(mui);
-
-
+    var nowDate = new Date();
+    $("#today ，#todaytab").click(function(){
+        nowDate = moment().format('MM/DD');
+        $("#today").html("今日"+ nowDate)
+    })
+    $("#today").html("今日" + moment().format('MM/DD'))
+    $(".yesterday").click(function(){
+        nowDate =  moment(nowDate).subtract(1, "days").format('MM/DD')
+        $("#today").html("当前日期"+ nowDate)
+    })
+    $(".tomorrow").click(function(){
+        nowDate =  moment(nowDate).add(1, "days").format('MM/DD')
+        $("#today").html("当前日期"+ nowDate)
+    })
+    $("#todaytab").html("今日" + moment().format('MM/DD'))
+    $(".yesterdaytab").click(function(){
+        nowDate =  moment(nowDate).subtract(1, "days").format('MM/DD')
+        $("#todaytab").html("当前日期"+ nowDate)
+    })
+    $(".tomorrowtab").click(function(){
+        nowDate =  moment(nowDate).add(1, "days").format('MM/DD')
+        $("#todaytab").html("当前日期"+ nowDate)
+    })
 </script>
 </html>
