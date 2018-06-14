@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模糊查询</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="div_main">
+
+    <form >
+        <div id="div_txt">
+            <input type="text" id="txt1" />
+
+            <div id="div_items" style="display: none">
+                <div class="div_item">白起</div>
+                <div class="div_item">李白</div>
+                <div class="div_item">东皇</div>
+                <div class="div_item">王昭君</div>
+
+                <div class="div_item">宝马GT</div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+
+    //弹出列表框
+    $("#txt1").click(function () {
+        $("#div_items").css('display', 'block');
+        return false;
+    });
+
+    //隐藏列表框
+    $("body").click(function () {
+        $("#div_items").css('display', 'none');
+    });
+
+    //文本框输入
+    $("#txt1").keyup(function () {
+        $("#div_items").css('display', 'block');
+
+        if ($("#txt1").val().length <= 0) {
+            $(".div_item").css('display', 'block');
+            return;
+        }
+
+        $(".div_item").css('display', 'none');
+        //循环查询
+        for (var i = 0; i < $(".div_item").length; i++) {
+            //模糊匹配，将所有匹配项显示
+            if ($(".div_item").eq(i).text().substr(0, $("#txt1").val().length) == $("#txt1").val()) {
+                $(".div_item").eq(i).css('display', 'block');
+            }
+        }
+    });
+
+   //点击查询
+    $(".div_item").click(function () {
+        $("#txt1").val($(this).text());
+    });
+</script>
+</body>
+</html>

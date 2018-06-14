@@ -21,20 +21,14 @@ function resize() {
     $('.mui-slider-group').height(tabCon)
 }
 function personBagSector(){
-    // $(".mui-btn").click(function () {
-    //     alert("Text: " + $(this).text());
-    // })
+
     $(".searXltBtn li:first").click(function () {
         $("#xlSecor").hide()
     })
     $(".searZdtBtn li:first").click(function () {
         $("#zdSecor").hide()
     })
-    if($(".mui-tab-navList-two a:last").is(".mui-active")){
-        // $(this).addClass("mui-tab-two-line")
-        alert(1)
-    }
-    console.log($(".mui-tab-navList-two a:last").is(".mui-active"))
+
 }
 
 
